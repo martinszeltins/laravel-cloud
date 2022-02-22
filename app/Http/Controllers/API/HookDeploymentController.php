@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Hook;
-use App\Http\Controllers\Controller;
 use App\Exceptions\AlreadyDeployingException;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateHookDeploymentRequest;
+use App\Models\Hook;
 
 class HookDeploymentController extends Controller
 {
     /**
      * Create a new deployment for the hook.
      *
-     * @param  \App\Http\Requests\CreateHookDeploymentRequest  $request
-     * @param  \App\Hook  $hook
-     * @param  string  $token
+     * @param  \App\Http\Requests\CreateHookDeploymentRequest $request
+     * @param  \App\Models\Hook                               $hook
+     * @param  string                                         $token
+     *
      * @return Response
      */
     public function store(CreateHookDeploymentRequest $request, Hook $hook, $token)

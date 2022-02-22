@@ -2,16 +2,15 @@
 
 namespace Tests\Feature;
 
-use App\Stack;
-use App\Project;
-use App\Deployment;
-use Tests\TestCase;
-use App\ServerDeployment;
 use App\Jobs\PauseDaemons;
-use App\Jobs\UnpauseDaemons;
 use App\Jobs\RestartDaemons;
-use Illuminate\Support\Facades\Bus;
+use App\Jobs\UnpauseDaemons;
+use App\Models\Deployment;
+use App\Models\ServerDeployment;
+use App\Models\Stack;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Tests\TestCase;
 
 class DaemonControllerTest extends TestCase
 {

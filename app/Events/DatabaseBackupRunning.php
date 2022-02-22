@@ -2,10 +2,10 @@
 
 namespace App\Events;
 
-use App\DatabaseBackup;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Foundation\Events\Dispatchable;
+use App\Models\DatabaseBackup;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class DatabaseBackupRunning
 {
@@ -14,14 +14,15 @@ class DatabaseBackupRunning
     /**
      * The database backup instance.
      *
-     * @var \App\DatabaseBackup
+     * @var \App\Models\DatabaseBackup
      */
     public $backup;
 
     /**
      * Create a new event instance.
      *
-     * @param  \App\DatabaseBackup  $backup
+     * @param  \App\Models\DatabaseBackup $backup
+     *
      * @return void
      */
     public function __construct(DatabaseBackup $backup)

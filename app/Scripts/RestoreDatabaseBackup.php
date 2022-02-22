@@ -2,7 +2,7 @@
 
 namespace App\Scripts;
 
-use App\DatabaseRestore;
+use App\Models\DatabaseRestore;
 
 class RestoreDatabaseBackup extends Script
 {
@@ -16,14 +16,15 @@ class RestoreDatabaseBackup extends Script
     /**
      * The database restore instance.
      *
-     * @var \App\DatabaseRestore
+     * @var \App\Models\DatabaseRestore
      */
     public $restore;
 
     /**
      * Create a new script instance.
      *
-     * @param  \App\DatabaseRestore  $restore
+     * @param  \App\Models\DatabaseRestore $restore
+     *
      * @return void
      */
     public function __construct(DatabaseRestore $restore)

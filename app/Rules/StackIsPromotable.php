@@ -2,7 +2,6 @@
 
 namespace App\Rules;
 
-use App\Stack;
 use Illuminate\Contracts\Validation\Rule;
 
 class StackIsPromotable implements Rule
@@ -10,14 +9,15 @@ class StackIsPromotable implements Rule
     /**
      * The stack instance.
      *
-     * @var \App\Stack
+     * @var \App\Models\Stack
      */
     public $stack;
 
     /**
      * Create a new rule instance.
      *
-     * @param  \App\Stack  $stack
+     * @param  \App\Models\Stack $stack
+     *
      * @return void
      */
     public function __construct($stack)

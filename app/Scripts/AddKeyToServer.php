@@ -2,9 +2,6 @@
 
 namespace App\Scripts;
 
-use App\User;
-use App\Contracts\Provisionable;
-
 class AddKeyToServer extends Script
 {
     /**

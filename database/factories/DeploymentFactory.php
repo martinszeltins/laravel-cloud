@@ -11,9 +11,9 @@
 |
 */
 
-$factory->define(App\Deployment::class, function () {
+$factory->define(\App\Models\Deployment::class, function () {
     return [
-        'stack_id' => factory(App\Stack::class),
+        'stack_id' => factory(\App\Models\Stack::class),
         'branch' => 'master',
         'commit_hash' => str_random(20),
         'build_commands' => ['first'],

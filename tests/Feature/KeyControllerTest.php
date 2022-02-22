@@ -2,16 +2,14 @@
 
 namespace Tests\Feature;
 
-use App\User;
-use App\Project;
-use App\Database;
-use App\Balancer;
-use App\IpAddress;
-use Tests\TestCase;
 use App\Jobs\RemoveKeyFromServer;
+use App\Models\Balancer;
+use App\Models\IpAddress;
+use App\Models\User;
 use Facades\App\ShellProcessRunner;
-use Illuminate\Support\Facades\Bus;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Tests\TestCase;
 
 class KeyControllerTest extends TestCase
 {

@@ -2,8 +2,8 @@
 
 namespace App\Jobs;
 
-use App\Database;
 use App\Mail\DatabaseProvisioned;
+use App\Models\Database;
 use Illuminate\Support\Facades\Mail;
 
 class ProvisionDatabase extends ServerProvisioner
@@ -11,7 +11,8 @@ class ProvisionDatabase extends ServerProvisioner
     /**
      * Create a new job instance.
      *
-     * @param  \App\Database  $provisionable
+     * @param  \App\Models\Database $provisionable
+     *
      * @return void
      */
     public function __construct(Database $provisionable)

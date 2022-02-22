@@ -2,10 +2,10 @@
 
 namespace App\Events;
 
-use App\ServerTask;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Foundation\Events\Dispatchable;
+use App\Models\ServerTask;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class ServerTaskFinished
 {
@@ -14,14 +14,15 @@ class ServerTaskFinished
     /**
      * The server task instance.
      *
-     * @var \App\ServerTask
+     * @var \App\Models\ServerTask
      */
     public $task;
 
     /**
      * Create a new event instance.
      *
-     * @param  \App\ServerTask  $task
+     * @param  \App\Models\ServerTask $task
+     *
      * @return void
      */
     public function __construct(ServerTask $task)

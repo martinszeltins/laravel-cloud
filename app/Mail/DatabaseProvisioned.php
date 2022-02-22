@@ -2,7 +2,7 @@
 
 namespace App\Mail;
 
-use App\Database;
+use App\Models\Database;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -14,14 +14,15 @@ class DatabaseProvisioned extends Mailable
     /**
      * The database instance.
      *
-     * @var \App\Database
+     * @var \App\Models\Database
      */
     public $database;
 
     /**
      * Create a new message instance.
      *
-     * @param  \App\Database  $database
+     * @param  \App\Models\Database $database
+     *
      * @return void
      */
     public function __construct(Database $database)

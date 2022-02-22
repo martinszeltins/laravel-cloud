@@ -2,9 +2,9 @@
 
 namespace App\Contracts;
 
-use App\Hook;
-use App\Stack;
-use App\Deployment;
+use App\Models\Deployment;
+use App\Models\Hook;
+use App\Models\Stack;
 
 interface SourceProviderClient
 {
@@ -45,7 +45,8 @@ interface SourceProviderClient
     /**
      * Get the tarball URL for the given deployment.
      *
-     * @param  \App\Deployment  $deployment
+     * @param  \App\Models\Deployment $deployment
+     *
      * @return string
      */
     public function tarballUrl(Deployment $deployment);
@@ -53,7 +54,8 @@ interface SourceProviderClient
     /**
      * Publish the given hook.
      *
-     * @param  \App\Hook  $hook
+     * @param  \App\Models\Hook $hook
+     *
      * @return void
      */
     public function publishHook(Hook $hook);
@@ -61,8 +63,9 @@ interface SourceProviderClient
     /**
      * Determine if the given hook payload is a test.
      *
-     * @param  \App\Hook  $hook
-     * @param  array  $payload
+     * @param \App\Models\Hook $hook
+     * @param  array           $payload
+     *
      * @return bool
      */
     public function isTestHookPayload(Hook $hook, array $payload);
@@ -70,8 +73,9 @@ interface SourceProviderClient
     /**
      * Determine if the given hook payload applies to the hook.
      *
-     * @param  \App\Hook  $hook
-     * @param  array  $payload
+     * @param \App\Models\Hook $hook
+     * @param  array           $payload
+     *
      * @return bool
      */
     public function receivesHookPayload(Hook $hook, array $payload);
@@ -87,7 +91,8 @@ interface SourceProviderClient
     /**
      * Unpublish the given hook.
      *
-     * @param  \App\Hook  $hook
+     * @param  \App\Models\Hook $hook
+     *
      * @return void
      */
     public function unpublishHook(Hook $hook);
@@ -95,9 +100,10 @@ interface SourceProviderClient
     /**
      * Get the manifest content for the given stack and hash.
      *
-     * @param  \App\Stack  $stack
-     * @param  string  $repository
-     * @param  string  $hash
+     * @param  \App\Models\Stack $stack
+     * @param  string            $repository
+     * @param  string            $hash
+     *
      * @return string
      */
     public function manifest(Stack $stack, $repository, $hash);

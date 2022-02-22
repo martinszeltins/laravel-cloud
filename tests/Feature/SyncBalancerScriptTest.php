@@ -2,10 +2,10 @@
 
 namespace Tests\Feature;
 
-use App\Balancer;
-use Tests\TestCase;
+use App\Models\Balancer;
 use App\Scripts\SyncBalancer;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class SyncBalancerScriptTest extends TestCase
 {

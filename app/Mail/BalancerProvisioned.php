@@ -2,7 +2,7 @@
 
 namespace App\Mail;
 
-use App\Balancer;
+use App\Models\Balancer;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -14,14 +14,15 @@ class BalancerProvisioned extends Mailable
     /**
      * The balancer instance.
      *
-     * @var \App\Balancer
+     * @var \App\Models\Balancer
      */
     public $balancer;
 
     /**
      * Create a new message instance.
      *
-     * @param  \App\Balancer  $balancer
+     * @param  \App\Models\Balancer $balancer
+     *
      * @return void
      */
     public function __construct(Balancer $balancer)

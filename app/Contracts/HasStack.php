@@ -7,7 +7,7 @@ interface HasStack
     /**
      * Get the stack instance for the object.
      *
-     * @return \App\Stack
+     * @return \App\Models\Stack
      */
     public function stack();
 }

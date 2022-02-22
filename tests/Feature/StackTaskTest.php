@@ -2,19 +2,19 @@
 
 namespace Tests\Feature;
 
-use App\Stack;
-use App\StackTask;
-use App\WebServer;
-use App\ServerTask;
-use Tests\TestCase;
-use App\WorkerServer;
-use App\ShellProcessRunner;
-use App\Events\StackTaskFailed;
 use App\Events\ServerTaskFailed;
-use App\Events\StackTaskFinished;
 use App\Events\ServerTaskFinished;
-use Illuminate\Support\Facades\Event;
+use App\Events\StackTaskFailed;
+use App\Events\StackTaskFinished;
+use App\Models\ServerTask;
+use App\Models\Stack;
+use App\Models\StackTask;
+use App\Models\WebServer;
+use App\Models\WorkerServer;
+use App\Services\ShellProcessRunner;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Event;
+use Tests\TestCase;
 
 class StackTaskTest extends TestCase
 {

@@ -11,9 +11,9 @@
 |
 */
 
-$factory->define(App\StackTask::class, function () {
+$factory->define(\App\Models\StackTask::class, function () {
     return [
-        'stack_id' => factory(App\Stack::class),
+        'stack_id' => factory(\App\Models\Stack::class),
         'name' => 'Test Name',
         'user' => 'cloud',
         'commands' => [

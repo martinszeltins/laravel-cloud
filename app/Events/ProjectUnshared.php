@@ -2,11 +2,11 @@
 
 namespace App\Events;
 
-use App\User;
-use App\Project;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Foundation\Events\Dispatchable;
+use App\Models\Project;
+use App\Models\User;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class ProjectUnshared
 {
@@ -15,14 +15,14 @@ class ProjectUnshared
     /**
      * The project instance.
      *
-     * @var \App\Project
+     * @var \App\Models\Project
      */
     public $project;
 
     /**
      * The user instance.
      *
-     * @var \App\User
+     * @var \App\Models\User
      */
     public $user;
 

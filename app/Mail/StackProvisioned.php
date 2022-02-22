@@ -2,7 +2,7 @@
 
 namespace App\Mail;
 
-use App\Stack;
+use App\Models\Stack;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -14,14 +14,15 @@ class StackProvisioned extends Mailable
     /**
      * The stack instance.
      *
-     * @var \App\Stack
+     * @var \App\Models\Stack
      */
     public $stack;
 
     /**
      * Create a new message instance.
      *
-     * @param  \App\Stack  $stack
+     * @param  \App\Models\Stack $stack
+     *
      * @return void
      */
     public function __construct(Stack $stack)

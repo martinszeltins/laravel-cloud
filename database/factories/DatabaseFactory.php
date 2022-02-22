@@ -11,9 +11,9 @@
 |
 */
 
-$factory->define(App\Database::class, function () {
+$factory->define(\App\Models\Database::class, function () {
     return [
-        'project_id' => factory(App\Project::class),
+        'project_id' => factory(\App\Models\Project::class),
         'name' => str_random(6),
         'size' => '2gb',
         'provider_server_id' => 1,

@@ -2,25 +2,26 @@
 
 namespace App\Services;
 
-use Exception;
-use Aws\S3\S3Client;
-use App\DatabaseBackup;
-use App\StorageProvider;
 use App\Contracts\StorageProviderClient;
+use App\Models\DatabaseBackup;
+use App\Models\StorageProvider;
+use Aws\S3\S3Client;
+use Exception;
 
 class S3 implements StorageProviderClient
 {
     /**
      * The storage provider instance.
      *
-     * @var \App\StorageProvider
+     * @var \App\Models\StorageProvider
      */
     public $provider;
 
     /**
      * Create a new storage provider instance.
      *
-     * @param  \App\StorageProvider  $provider
+     * @param  \App\Models\StorageProvider $provider
+     *
      * @return void
      */
     public function __construct(StorageProvider $provider)
@@ -180,7 +181,8 @@ class S3 implements StorageProviderClient
     /**
      * Get the upload script for the storage provider.
      *
-     * @param  \App\DatabaseBackup  $backup
+     * @param  \App\Models\DatabaseBackup $backup
+     *
      * @return string
      */
     public function uploadScript(DatabaseBackup $backup)
@@ -196,7 +198,8 @@ class S3 implements StorageProviderClient
     /**
      * Get the download script for the storage provider.
      *
-     * @param  \App\DatabaseBackup  $backup
+     * @param \App\Models\DatabaseBackup $backup
+     *
      * @return string
      */
     public function downloadScript(DatabaseBackup $backup)

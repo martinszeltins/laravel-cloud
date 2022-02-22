@@ -2,11 +2,11 @@
 
 namespace App\Events;
 
-use App\Stack;
 use App\Contracts\Alertable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Foundation\Events\Dispatchable;
+use App\Models\Stack;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class StackProvisioned implements Alertable
 {
@@ -15,14 +15,15 @@ class StackProvisioned implements Alertable
     /**
      * The stack instance.
      *
-     * @var \App\Stack
+     * @var \App\Models\Stack
      */
     public $stack;
 
     /**
      * Create a new event instance.
      *
-     * @param  \App\Stack  $stack
+     * @param  \App\Models\Stack $stack
+     *
      * @return void
      */
     public function __construct(Stack $stack)
@@ -33,7 +34,7 @@ class StackProvisioned implements Alertable
     /**
      * Create an alert for the given instance.
      *
-     * @return \App\Alert
+     * @return \App\Models\Alert
      */
     public function toAlert()
     {

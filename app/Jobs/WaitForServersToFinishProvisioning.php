@@ -2,13 +2,13 @@
 
 namespace App\Jobs;
 
-use App\Stack;
+use App\Exceptions\StackProvisioningTimeout;
+use App\Models\Stack;
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use App\Exceptions\StackProvisioningTimeout;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class WaitForServersToFinishProvisioning implements ShouldQueue
 {
@@ -17,7 +17,7 @@ class WaitForServersToFinishProvisioning implements ShouldQueue
     /**
      * The stack instance.
      *
-     * @var \App\Stack
+     * @var \App\Models\Stack
      */
     public $stack;
 
@@ -31,7 +31,8 @@ class WaitForServersToFinishProvisioning implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @param  \App\Stack  $stack
+     * @param  \App\Models\Stack $stack
+     *
      * @return void
      */
     public function __construct(Stack $stack)

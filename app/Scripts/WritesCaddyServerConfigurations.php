@@ -2,7 +2,7 @@
 
 namespace App\Scripts;
 
-use App\CaddyServerConfiguration;
+use App\Services\CaddyServerConfiguration;
 
 trait WritesCaddyServerConfigurations
 {

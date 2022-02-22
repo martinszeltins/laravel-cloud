@@ -2,7 +2,7 @@
 
 namespace App\Scripts;
 
-use App\Task;
+use App\Models\Task;
 
 class Script
 {

@@ -2,10 +2,10 @@
 
 namespace Tests\Feature;
 
-use App\Balancer;
-use Tests\TestCase;
+use App\Models\Balancer;
 use App\Scripts\ProvisionBalancer;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class ProvisionBalancerScriptTest extends TestCase
 {

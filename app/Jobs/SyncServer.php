@@ -2,13 +2,13 @@
 
 namespace App\Jobs;
 
-use App\Server;
+use App\Models\Server;
+use App\Scripts\SyncServer as SyncServerScript;
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use App\Scripts\SyncServer as SyncServerScript;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class SyncServer implements ShouldQueue
 {
@@ -17,14 +17,15 @@ class SyncServer implements ShouldQueue
     /**
      * The server instance.
      *
-     * @var \App\Server
+     * @var \App\Models\Server
      */
     public $server;
 
     /**
      * Create a new job instance.
      *
-     * @param  \App\Server  $server
+     * @param  \App\Models\Server $server
+     *
      * @return void
      */
     public function __construct(Server $server)

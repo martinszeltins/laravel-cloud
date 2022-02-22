@@ -2,14 +2,14 @@
 
 namespace App\Jobs;
 
-use App\DatabaseBackup;
-use Illuminate\Bus\Queueable;
 use App\Callbacks\CheckDatabaseBackup;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
+use App\Models\DatabaseBackup;
+use App\Scripts\StoreDatabaseBackup as StoreDatabaseBackupScript;
+use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use App\Scripts\StoreDatabaseBackup as StoreDatabaseBackupScript;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class StoreDatabaseBackup implements ShouldQueue
 {
@@ -18,14 +18,15 @@ class StoreDatabaseBackup implements ShouldQueue
     /**
      * The database backup instance.
      *
-     * @var \App\DatabaseBackup
+     * @var \App\Models\DatabaseBackup
      */
     public $backup;
 
     /**
      * Create a new job instance.
      *
-     * @param  \App\DatabaseBackup  $backup
+     * @param  \App\Models\DatabaseBackup $backup
+     *
      * @return void
      */
     public function __construct(DatabaseBackup $backup)

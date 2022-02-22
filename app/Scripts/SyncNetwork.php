@@ -2,21 +2,22 @@
 
 namespace App\Scripts;
 
-use App\Database;
+use App\Models\Database;
 
 class SyncNetwork extends Script
 {
     /**
      * The database instance.
      *
-     * @var \App\Database
+     * @var \App\Models\Database
      */
     public $database;
 
     /**
      * Create a new script instance.
      *
-     * @param  \App\Database  $database
+     * @param  \App\Models\Database $database
+     *
      * @return void
      */
     public function __construct(Database $database)

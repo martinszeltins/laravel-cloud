@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\API;
 
-use App\User;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller

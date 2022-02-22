@@ -2,14 +2,15 @@
 
 namespace App\Jobs;
 
-use App\WorkerServer;
+use App\Models\WorkerServer;
 
 class ProvisionWorkerServer extends ServerProvisioner
 {
     /**
      * Create a new job instance.
      *
-     * @param  \App\WorkerServer  $provisionable
+     * @param  \App\Models\WorkerServer $provisionable
+     *
      * @return void
      */
     public function __construct(WorkerServer $provisionable)

@@ -12,9 +12,9 @@
 */
 
 
-$factory->define(App\StorageProvider::class, function () {
+$factory->define(\App\Models\StorageProvider::class, function () {
     return [
-        'user_id' => factory(App\User::class),
+        'user_id' => factory(\App\Models\User::class),
         'name' => 'S3',
         'type' => 'S3',
         'meta' => [

@@ -2,12 +2,12 @@
 
 namespace Tests\Feature;
 
-use App\Database;
-use App\IpAddress;
-use Tests\TestCase;
-use App\ShellProcessRunner;
+use App\Models\Database;
+use App\Models\IpAddress;
+use App\Services\ShellProcessRunner;
 use Facades\App\ServerProviderClientFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class ProvisionableTest extends TestCase
 {

@@ -2,13 +2,13 @@
 
 namespace Tests\Feature;
 
-use Mockery;
-use App\Hook;
-use App\Stack;
-use Tests\TestCase;
-use Illuminate\Support\Facades\Bus;
+use App\Models\Hook;
+use App\Models\Stack;
 use Facades\App\SourceProviderClientFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Mockery;
+use Tests\TestCase;
 
 class HookControllerTest extends TestCase
 {

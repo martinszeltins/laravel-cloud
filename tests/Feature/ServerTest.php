@@ -2,10 +2,9 @@
 
 namespace Tests\Feature;
 
-use App\Stack;
-use App\AppServer;
-use Tests\TestCase;
+use App\Services\AppServer;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class ServerTest extends TestCase
 {

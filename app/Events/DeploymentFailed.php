@@ -2,13 +2,12 @@
 
 namespace App\Events;
 
-use Exception;
-use App\Deployment;
-use App\Contracts\HasStack;
 use App\Contracts\Alertable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Foundation\Events\Dispatchable;
+use App\Contracts\HasStack;
+use App\Models\Deployment;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class DeploymentFailed implements Alertable, HasStack
 {
@@ -17,15 +16,16 @@ class DeploymentFailed implements Alertable, HasStack
     /**
      * The deployment instance.
      *
-     * @var \App\Deployment
+     * @var \App\Models\Deployment
      */
     public $deployment;
 
     /**
      * Create a new event instance.
      *
-     * @param  \App\Deployment  $deployment
-     * @param  \Exception|null  $exception
+     * @param  \App\Models\Deployment $deployment
+     * @param  \Exception|null        $exception
+     *
      * @return void
      */
     public function __construct(Deployment $deployment, $exception = null)
@@ -37,7 +37,7 @@ class DeploymentFailed implements Alertable, HasStack
     /**
      * Get the stack instance for the object.
      *
-     * @return \App\Stack
+     * @return \App\Models\Stack
      */
     public function stack()
     {
@@ -47,7 +47,7 @@ class DeploymentFailed implements Alertable, HasStack
     /**
      * Create an alert for the given instance.
      *
-     * @return \App\Alert
+     * @return \App\Models\Alert
      */
     public function toAlert()
     {

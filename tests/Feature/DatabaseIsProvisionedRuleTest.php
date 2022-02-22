@@ -2,11 +2,10 @@
 
 namespace Tests\Feature;
 
-use App\Project;
-use App\Database;
-use Tests\TestCase;
+use App\Models\Database;
 use App\Rules\DatabaseIsProvisioned;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class DatabaseIsProvisionedRuleTest extends TestCase
 {

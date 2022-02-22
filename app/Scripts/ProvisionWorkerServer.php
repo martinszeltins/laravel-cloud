@@ -2,21 +2,22 @@
 
 namespace App\Scripts;
 
-use App\WorkerServer;
+use App\Models\WorkerServer;
 
 class ProvisionWorkerServer extends ProvisioningScript
 {
     /**
      * The server instance.
      *
-     * @var \App\WorkerServer
+     * @var \App\Models\WorkerServer
      */
     public $server;
 
     /**
      * Create a new script instance.
      *
-     * @param  \App\WorkerServer  $server
+     * @param  \App\Models\WorkerServer $server
+     *
      * @return void
      */
     public function __construct(WorkerServer $server)

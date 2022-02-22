@@ -2,7 +2,7 @@
 
 namespace App\Scripts;
 
-use App\DatabaseBackup;
+use App\Models\DatabaseBackup;
 
 class StoreDatabaseBackup extends Script
 {
@@ -16,14 +16,15 @@ class StoreDatabaseBackup extends Script
     /**
      * The database backup instance.
      *
-     * @var \App\DatabaseBackup
+     * @var \App\Models\DatabaseBackup
      */
     public $backup;
 
     /**
      * Create a new script instance.
      *
-     * @param  \App\DatabaseBackup  $backup
+     * @param  \App\Models\DatabaseBackup $backup
+     *
      * @return void
      */
     public function __construct(DatabaseBackup $backup)

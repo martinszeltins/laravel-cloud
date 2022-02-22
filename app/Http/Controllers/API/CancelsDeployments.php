@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Deployment;
+use App\Models\Deployment;
 
 trait CancelsDeployments
 {
     /**
      * Attempt to cancel the given deployment.
      *
-     * @param  \App\Deployment  $deployment
+     * @param  \App\Models\Deployment $deployment
+     *
      * @return Response
      */
     protected function cancel(Deployment $deployment)

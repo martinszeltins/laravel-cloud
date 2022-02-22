@@ -11,10 +11,10 @@
 |
 */
 
-$factory->define(App\WorkerServer::class, function () {
+$factory->define(\App\Models\WorkerServer::class, function () {
     return [
-        'project_id' => factory(App\Project::class),
-        'stack_id' => factory(App\Stack::class),
+        'project_id' => factory(\App\Models\Project::class),
+        'stack_id' => factory(\App\Models\Stack::class),
         'name' => str_random(6),
         'size' => '2gb',
         'provider_server_id' => 1,

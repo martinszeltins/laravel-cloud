@@ -2,12 +2,12 @@
 
 namespace Tests\Feature;
 
-use App\Deployment;
-use Tests\TestCase;
-use App\ServerDeployment;
-use App\ShellProcessRunner;
 use App\Jobs\RestartDaemons;
+use App\Models\Deployment;
+use App\Models\ServerDeployment;
+use App\Services\ShellProcessRunner;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class RestartDaemonsJobTest extends TestCase
 {

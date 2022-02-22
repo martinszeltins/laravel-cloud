@@ -2,12 +2,12 @@
 
 namespace App\Jobs;
 
-use App\Project;
+use App\Models\Project;
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class SyncBalancers implements ShouldQueue
 {
@@ -16,14 +16,15 @@ class SyncBalancers implements ShouldQueue
     /**
      * The project instance.
      *
-     * @var \App\Project
+     * @var \App\Models\Project
      */
     public $project;
 
     /**
      * Create a new job instance.
      *
-     * @param  \App\Project  $project
+     * @param  \App\Models\Project $project
+     *
      * @return void
      */
     public function __construct(Project $project)

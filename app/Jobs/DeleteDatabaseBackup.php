@@ -2,12 +2,12 @@
 
 namespace App\Jobs;
 
-use App\StorageProvider;
+use App\Models\StorageProvider;
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class DeleteDatabaseBackup implements ShouldQueue
 {
@@ -16,7 +16,7 @@ class DeleteDatabaseBackup implements ShouldQueue
     /**
      * The storage provider instance.
      *
-     * @var \App\StorageProvider
+     * @var \App\Models\StorageProvider
      */
     public $provider;
 
@@ -30,8 +30,9 @@ class DeleteDatabaseBackup implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @param  \App\StorageProvider  $provider
-     * @param  string  $backupPath
+     * @param  \App\Models\StorageProvider $provider
+     * @param  string                      $backupPath
+     *
      * @return void
      */
     public function __construct(StorageProvider $provider, $backupPath)

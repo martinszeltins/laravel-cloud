@@ -2,10 +2,8 @@
 
 namespace App\Policies;
 
-use App\User;
-use App\Stack;
-use App\Project;
-use App\Environment;
+use App\Models\Stack;
+use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class StackPolicy
@@ -15,8 +13,9 @@ class StackPolicy
     /**
      * Determine whether the user can view the stack.
      *
-     * @param  \App\User  $user
-     * @param  \App\Stack  $stack
+     * @param  \App\Models\User  $user
+     * @param  \App\Models\Stack $stack
+     *
      * @return mixed
      */
     public function view(User $user, Stack $stack)
@@ -27,8 +26,9 @@ class StackPolicy
     /**
      * Determine whether the user can delete the stack.
      *
-     * @param  \App\User  $user
-     * @param  \App\Stack  $stack
+     * @param \App\Models\User   $user
+     * @param  \App\Models\Stack $stack
+     *
      * @return mixed
      */
     public function delete(User $user, Stack $stack)

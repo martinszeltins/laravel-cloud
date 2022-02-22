@@ -2,12 +2,12 @@
 
 namespace App\Events;
 
-use App\Deployment;
+use App\Models\Deployment;
 use Illuminate\Broadcasting\Channel;
-use Illuminate\Queue\SerializesModels;
+use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Foundation\Events\Dispatchable;
-use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Queue\SerializesModels;
 
 class DeploymentActivating
 {
@@ -16,14 +16,15 @@ class DeploymentActivating
     /**
      * The deployment instance.
      *
-     * @var \App\Deployment
+     * @var \App\Models\Deployment
      */
     public $deployment;
 
     /**
      * Create a new event instance.
      *
-     * @param  \App\Deployment  $deployment
+     * @param  \App\Models\Deployment $deployment
+     *
      * @return void
      */
     public function __construct(Deployment $deployment)

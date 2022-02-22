@@ -2,16 +2,15 @@
 
 namespace App\Services;
 
-use App\Hook;
-use App\Stack;
-use Exception;
-use App\Deployment;
-use App\Environment;
-use GuzzleHttp\Client;
-use App\SourceProvider;
 use App\Contracts\SourceProviderClient;
-use GuzzleHttp\Exception\ClientException;
 use App\Exceptions\ManifestNotFoundException;
+use App\Models\Deployment;
+use App\Models\Hook;
+use App\Models\SourceProvider;
+use App\Models\Stack;
+use Exception;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ClientException;
 
 class GitHub implements SourceProviderClient
 {
@@ -116,7 +115,8 @@ class GitHub implements SourceProviderClient
     /**
      * Get the tarball URL for the given deployment.
      *
-     * @param  \App\Deployment  $deployment
+     * @param  \App\Models\Deployment $deployment
+     *
      * @return string
      */
     public function tarballUrl(Deployment $deployment)
@@ -132,7 +132,8 @@ class GitHub implements SourceProviderClient
     /**
      * Publish the given hook.
      *
-     * @param  \App\Hook  $hook
+     * @param  \App\Models\Hook $hook
+     *
      * @return void
      */
     public function publishHook(Hook $hook)
@@ -160,8 +161,9 @@ class GitHub implements SourceProviderClient
     /**
      * Determine if the given hook payload is a test.
      *
-     * @param  \App\Hook  $hook
-     * @param  array  $payload
+     * @param \App\Models\Hook $hook
+     * @param  array           $payload
+     *
      * @return bool
      */
     public function isTestHookPayload(Hook $hook, array $payload)
@@ -172,8 +174,9 @@ class GitHub implements SourceProviderClient
     /**
      * Determine if the given hook payload applies to the hook.
      *
-     * @param  \App\Hook  $hook
-     * @param  array  $payload
+     * @param \App\Models\Hook $hook
+     * @param  array           $payload
+     *
      * @return bool
      */
     public function receivesHookPayload(Hook $hook, array $payload)
@@ -197,7 +200,8 @@ class GitHub implements SourceProviderClient
     /**
      * Unpublish the given hook.
      *
-     * @param  \App\Hook  $hook
+     * @param  \App\Models\Hook $hook
+     *
      * @return void
      */
     public function unpublishHook(Hook $hook)
@@ -219,7 +223,8 @@ class GitHub implements SourceProviderClient
     /**
      * Delete any hooks matching the given hooks URL.
      *
-     * @param  \App\Hook  $hook
+     * @param  \App\Models\Hook  $hook
+     *
      * @return void
      */
     protected function deleteHooksWithMatchingUrl(Hook $hook)
@@ -232,7 +237,8 @@ class GitHub implements SourceProviderClient
     /**
      * Find a hook by the given hook's URL.
      *
-     * @param  \App\Hook  $hook
+     * @param  \App\Models\Hook  $hook
+     *
      * @return array|null
      */
     protected function findHookWithMatchingUrl(Hook $hook)
@@ -260,9 +266,10 @@ class GitHub implements SourceProviderClient
     /**
      * Get the manifest content for the given stack and hash.
      *
-     * @param  \App\Stack  $stack
-     * @param  string  $repository
-     * @param  string  $hash
+     * @param  \App\Models\Stack $stack
+     * @param  string            $repository
+     * @param  string            $hash
+     *
      * @return string
      */
     public function manifest(Stack $stack, $repository, $hash)

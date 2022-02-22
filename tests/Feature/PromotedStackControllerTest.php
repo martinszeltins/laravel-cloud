@@ -2,14 +2,13 @@
 
 namespace Tests\Feature;
 
-use App\User;
-use App\Stack;
-use App\WebServer;
-use Tests\TestCase;
-use App\Environment;
 use App\Jobs\PromoteStack;
-use Illuminate\Support\Facades\Bus;
+use App\Models\Stack;
+use App\Models\User;
+use App\Models\WebServer;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Tests\TestCase;
 
 class PromotedStackControllerTest extends TestCase
 {

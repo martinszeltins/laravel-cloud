@@ -2,13 +2,13 @@
 
 namespace App\Jobs;
 
-use App\Database;
+use App\Models\Database;
+use App\Scripts\SyncNetwork as SyncNetworkScript;
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use App\Scripts\SyncNetwork as SyncNetworkScript;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class SyncNetwork implements ShouldQueue
 {
@@ -17,7 +17,7 @@ class SyncNetwork implements ShouldQueue
     /**
      * The database instance.
      *
-     * @var \App\Database
+     * @var \App\Models\Database
      */
     public $database;
 
@@ -38,7 +38,8 @@ class SyncNetwork implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @param  \App\Database  $database
+     * @param  \App\Models\Database $database
+     *
      * @return void
      */
     public function __construct(Database $database)
@@ -70,8 +71,9 @@ class SyncNetwork implements ShouldQueue
     /**
      * Run the sync script for the given database and IP addresses.
      *
-     * @param  \App\Database  $database
-     * @return \App\Task
+     * @param \App\Models\Database $database
+     *
+     * @return \App\Models\Task
      */
     protected function sync(Database $database)
     {

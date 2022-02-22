@@ -2,7 +2,6 @@
 
 namespace App\Jobs;
 
-use App\Deployment;
 use App\Scripts\StopDaemons as StopDaemonsScript;
 
 class StopDaemons extends ManipulatesDaemons

@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use App\Project;
-use Tests\TestCase;
-use App\SourceProvider;
+use App\Models\Project;
+use App\Models\SourceProvider;
 use App\Services\GitHub;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class SourceControllerTest extends TestCase
 {

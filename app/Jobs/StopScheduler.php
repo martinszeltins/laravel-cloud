@@ -2,13 +2,13 @@
 
 namespace App\Jobs;
 
-use App\ServerDeployment;
+use App\Models\ServerDeployment;
+use App\Scripts\StopScheduler as StopSchedulerScript;
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use App\Scripts\StopScheduler as StopSchedulerScript;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class StopScheduler implements ShouldQueue
 {
@@ -17,14 +17,15 @@ class StopScheduler implements ShouldQueue
     /**
      * The server deployment instance.
      *
-     * @var \App\ServerDeployment
+     * @var \App\Models\ServerDeployment
      */
     public $deployment;
 
     /**
      * Create a new job instance.
      *
-     * @param  \App\ServerDeployment  $deployment
+     * @param  \App\Models\ServerDeployment $deployment
+     *
      * @return void
      */
     public function __construct(ServerDeployment $deployment)

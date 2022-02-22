@@ -2,14 +2,14 @@
 
 namespace App\Scripts;
 
-use App\ServerTask;
+use App\Models\ServerTask;
 
 class RunServerTask extends Script
 {
     /**
      * The task instance.
      *
-     * @var \App\ServerTask
+     * @var \App\Models\ServerTask
      */
     public $task;
 
@@ -23,7 +23,8 @@ class RunServerTask extends Script
     /**
      * Create a new script instance.
      *
-     * @param  \App\ServerTask  $task
+     * @param  \App\Models\ServerTask $task
+     *
      * @return void
      */
     public function __construct(ServerTask $task)

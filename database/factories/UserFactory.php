@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(App\User::class, function ($faker) {
+$factory->define(\App\Models\User::class, function ($faker) {
     static $key;
     static $password;
     static $workerKey;
@@ -21,7 +21,7 @@ $factory->define(App\User::class, function ($faker) {
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
-        'keypair' => $key = $key ?: App\SecureShellKey::forNewUser(),
-        'worker_keypair' => $workerKey = $workerKey ?: App\SecureShellKey::forNewUser(),
+        'keypair' => $key = $key ?: \App\Services\SecureShellKey::forNewUser(),
+        'worker_keypair' => $workerKey = $workerKey ?: \App\Services\SecureShellKey::forNewUser(),
     ];
 });

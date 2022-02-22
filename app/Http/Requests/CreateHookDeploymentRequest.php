@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests;
 
-use App\MemoizesMethods;
-use App\DeploymentInstructions;
+use App\Services\DeploymentInstructions;
+use App\Traits\MemoizesMethods;
 use Illuminate\Foundation\Http\FormRequest;
 
 class CreateHookDeploymentRequest extends FormRequest
@@ -65,7 +65,7 @@ class CreateHookDeploymentRequest extends FormRequest
     /**
      * Get the deployment instructions for the commit.
      *
-     * @return \App\DeploymentInstructions
+     * @return \App\Services\DeploymentInstructions
      */
     public function instructions()
     {

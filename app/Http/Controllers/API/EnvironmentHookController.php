@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Environment;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Environment;
+use Illuminate\Http\Request;
 
 class EnvironmentHookController extends Controller
 {
     /**
      * Get the hooks for the given environment.
      *
-     * @param  Request  $request
-     * @param  \App\Environment  $environment
+     * @param  Request                 $request
+     * @param  \App\Models\Environment $environment
+     *
      * @return Response
      */
     public function index(Request $request, Environment $environment)

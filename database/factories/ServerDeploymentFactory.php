@@ -11,11 +11,11 @@
 |
 */
 
-$factory->define(App\ServerDeployment::class, function () {
+$factory->define(\App\Models\ServerDeployment::class, function () {
     return [
-        'deployment_id' => factory(App\Deployment::class),
-        'deployable_id' => factory(App\AppServer::class),
-        'deployable_type' => App\AppServer::class,
+        'deployment_id' => factory(\App\Models\Deployment::class),
+        'deployable_id' => factory(\App\Services\AppServer::class),
+        'deployable_type' => \App\Services\AppServer::class,
         'build_commands' => [],
         'activation_commands' => [],
         'status' => 'running',

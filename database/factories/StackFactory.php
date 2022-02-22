@@ -11,12 +11,12 @@
 |
 */
 
-$factory->define(App\Stack::class, function () {
+$factory->define(\App\Models\Stack::class, function () {
     return [
-        'environment_id' => factory(App\Environment::class),
-        'creator_id' => factory(App\User::class),
+        'environment_id' => factory(\App\Models\Environment::class),
+        'creator_id' => factory(\App\Models\User::class),
         'name' => 'test-stack',
-        'url' => App\Haiku::withToken(),
+        'url' => \App\Services\Haiku::withToken(),
         'balanced' => false,
         'status' => 'pending',
         'pending_deployment' => [],

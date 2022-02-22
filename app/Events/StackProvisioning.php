@@ -2,12 +2,12 @@
 
 namespace App\Events;
 
-use App\Stack;
+use App\Models\Stack;
 use Illuminate\Broadcasting\Channel;
-use Illuminate\Queue\SerializesModels;
+use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Foundation\Events\Dispatchable;
-use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Queue\SerializesModels;
 
 class StackProvisioning
 {
@@ -16,14 +16,15 @@ class StackProvisioning
     /**
      * The stack being provisioned.
      *
-     * @var Stack
+     * @var \App\Models\Stack
      */
     public $stack;
 
     /**
      * Create a new event instance.
      *
-     * @param  Stack  $stack
+     * @param \App\Models\Stack $stack
+     *
      * @return void
      */
     public function __construct(Stack $stack)

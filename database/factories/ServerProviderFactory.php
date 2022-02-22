@@ -11,10 +11,10 @@
 |
 */
 
-$factory->define(App\ServerProvider::class, function () {
+$factory->define(\App\Models\ServerProvider::class, function () {
     return [
         'user_id' => function () {
-            return factory(App\User::class)->create();
+            return factory(\App\Models\User::class)->create();
         },
         'name' => 'DigitalOcean',
         'type' => 'DigitalOcean',

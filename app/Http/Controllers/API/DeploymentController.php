@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Stack;
-use App\Deployment;
-use Illuminate\Http\Request;
-use App\DeploymentInstructions;
-use App\Http\Controllers\Controller;
 use App\Exceptions\AlreadyDeployingException;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateDeploymentRequest;
+use App\Models\Deployment;
+use App\Models\Stack;
+use App\Services\DeploymentInstructions;
+use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
 class DeploymentController extends Controller
@@ -18,8 +18,9 @@ class DeploymentController extends Controller
     /**
      * Get the recent deployments for the given stack.
      *
-     * @param  Request  $request
-     * @param  \App\Stack  $stack
+     * @param  Request           $request
+     * @param  \App\Models\Stack $stack
+     *
      * @return Response
      */
     public function index(Request $request, Stack $stack)
@@ -32,7 +33,8 @@ class DeploymentController extends Controller
     /**
      * Get the deployment with the given ID.
      *
-     * @param \App\Deployment  $deployment
+     * @param \App\Models\Deployment $deployment
+     *
      * @return Response
      */
     public function show(Deployment $deployment)
@@ -80,7 +82,8 @@ class DeploymentController extends Controller
     /**
      * Cancel the given deployment.
      *
-     * @param  \App\Deployment  $deployment
+     * @param \App\Models\Deployment $deployment
+     *
      * @return Response
      */
     public function destroy(Deployment $deployment)

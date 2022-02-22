@@ -19,7 +19,7 @@ Artisan::command('inspire', function () {
 
 
 Artisan::command('cloud', function () {
-    $backup = App\DatabaseBackup::find(1);
+    $backup = \App\Models\DatabaseBackup::find(1);
 
     $backup->restore();
 });

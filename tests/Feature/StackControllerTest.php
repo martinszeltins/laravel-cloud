@@ -2,16 +2,14 @@
 
 namespace Tests\Feature;
 
-use App\User;
-use App\Stack;
-use App\Project;
-use App\Database;
-use Tests\TestCase;
-use App\Environment;
-use App\SourceProvider;
-use Illuminate\Support\Facades\Bus;
 use App\Jobs\CreateLoadBalancerIfNecessary;
+use App\Models\Database;
+use App\Models\Environment;
+use App\Models\SourceProvider;
+use App\Models\Stack;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Tests\TestCase;
 
 class StackControllerTest extends TestCase
 {

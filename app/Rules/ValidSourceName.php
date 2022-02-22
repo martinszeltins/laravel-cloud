@@ -2,7 +2,7 @@
 
 namespace App\Rules;
 
-use App\Project;
+use App\Models\Project;
 use Illuminate\Contracts\Validation\Rule;
 
 class ValidSourceName implements Rule
@@ -10,14 +10,15 @@ class ValidSourceName implements Rule
     /**
      * The project instance.
      *
-     * @var \App\Project
+     * @var \App\Models\Project
      */
     public $project;
 
     /**
      * Create a new rule instance.
      *
-     * @param  \App\Project  $project
+     * @param  \App\Models\Project $project
+     *
      * @return void
      */
     public function __construct($project)

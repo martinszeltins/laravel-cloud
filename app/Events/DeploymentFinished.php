@@ -2,14 +2,14 @@
 
 namespace App\Events;
 
-use App\Deployment;
-use App\Contracts\HasStack;
 use App\Contracts\Alertable;
+use App\Contracts\HasStack;
+use App\Models\Deployment;
 use Illuminate\Broadcasting\Channel;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class DeploymentFinished implements Alertable, HasStack, ShouldBroadcast
 {
@@ -18,14 +18,15 @@ class DeploymentFinished implements Alertable, HasStack, ShouldBroadcast
     /**
      * The deployment instance.
      *
-     * @var \App\Deployment
+     * @var \App\Models\Deployment
      */
     public $deployment;
 
     /**
      * Create a new event instance.
      *
-     * @param  \App\Deployment  $deployment
+     * @param  \App\Models\Deployment $deployment
+     *
      * @return void
      */
     public function __construct(Deployment $deployment)
@@ -36,7 +37,7 @@ class DeploymentFinished implements Alertable, HasStack, ShouldBroadcast
     /**
      * Get the stack instance for the object.
      *
-     * @return \App\Stack
+     * @return \App\Models\Stack
      */
     public function stack()
     {
@@ -46,7 +47,7 @@ class DeploymentFinished implements Alertable, HasStack, ShouldBroadcast
     /**
      * Create an alert for the given instance.
      *
-     * @return \App\Alert
+     * @return \App\Models\Alert
      */
     public function toAlert()
     {

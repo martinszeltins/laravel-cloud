@@ -2,10 +2,10 @@
 
 namespace Tests;
 
-use App\User;
-use App\SecureShellKey;
-use Illuminate\Support\Facades\Mail;
+use App\Models\User;
+use App\Services\SecureShellKey;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Support\Facades\Mail;
 
 abstract class TestCase extends BaseTestCase
 {
@@ -31,7 +31,7 @@ abstract class TestCase extends BaseTestCase
     /**
      * Create a dummy user.
      *
-     * @return \App\User
+     * @return \App\Models\User
      */
     protected function user()
     {
@@ -41,8 +41,9 @@ abstract class TestCase extends BaseTestCase
     /**
      * Refresh the SSH keys on the user instance.
      *
-     * @param  \App\User  $user
-     * @return \App\User
+     * @param  \App\Models\User $user
+     *
+     * @return \App\Models\User
      */
     protected function refreshKeys($user)
     {

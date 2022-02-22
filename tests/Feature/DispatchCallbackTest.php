@@ -2,10 +2,10 @@
 
 namespace Tests\Feature;
 
-use App\Task;
-use Tests\TestCase;
 use App\Callbacks\Dispatch;
+use App\Models\Task;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class DispatchCallbackTest extends TestCase
 {

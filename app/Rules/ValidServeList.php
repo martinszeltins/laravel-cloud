@@ -2,7 +2,7 @@
 
 namespace App\Rules;
 
-use App\Project;
+use App\Models\Project;
 use Illuminate\Contracts\Validation\Rule;
 
 class ValidServeList implements Rule
@@ -10,7 +10,7 @@ class ValidServeList implements Rule
     /**
      * The project instance.
      *
-     * @var \App\Project
+     * @var \App\Models\Project
      */
     public $project;
 
@@ -24,8 +24,9 @@ class ValidServeList implements Rule
     /**
      * Create a new rule instance.
      *
-     * @param  \App\Project  $project
-     * @param  string  $exceptEnvironment
+     * @param  \App\Models\Project $project
+     * @param  string              $exceptEnvironment
+     *
      * @return void
      */
     public function __construct($project, $exceptEnvironment = null)

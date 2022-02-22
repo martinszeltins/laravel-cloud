@@ -2,16 +2,16 @@
 
 namespace Tests\Feature;
 
-use App\AppServer;
-use Tests\TestCase;
-use App\Jobs\Activate;
-use App\Scripts\Script;
-use App\ServerDeployment;
-use App\ShellProcessRunner;
 use App\Callbacks\CheckActivation;
 use App\Callbacks\StartBackgroundServices;
+use App\Jobs\Activate;
+use App\Models\ServerDeployment;
 use App\Scripts\Activate as ActivateScript;
+use App\Scripts\Script;
+use App\Services\AppServer;
+use App\Services\ShellProcessRunner;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class ActivateJobTest extends TestCase
 {

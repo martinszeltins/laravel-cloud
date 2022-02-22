@@ -2,13 +2,13 @@
 
 namespace Tests\Feature;
 
-use App\Stack;
-use App\AppServer;
-use App\IpAddress;
-use App\WebServer;
-use Tests\TestCase;
-use App\WorkerServer;
+use App\Models\IpAddress;
+use App\Models\Stack;
+use App\Models\WebServer;
+use App\Models\WorkerServer;
+use App\Services\AppServer;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class StackServerControllerTest extends TestCase
 {

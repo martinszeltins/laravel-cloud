@@ -2,7 +2,7 @@
 
 namespace App\Scripts;
 
-use App\Server;
+use App\Models\Server;
 
 class SyncServer extends Script
 {
@@ -11,14 +11,15 @@ class SyncServer extends Script
     /**
      * The server instance.
      *
-     * @var \App\Server
+     * @var \App\Models\Server
      */
     public $server;
 
     /**
      * Create a new script instance.
      *
-     * @param  \App\Server  $server
+     * @param  \App\Models\Server $server
+     *
      * @return void
      */
     public function __construct(Server $server)

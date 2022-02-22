@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Stack;
 use App\Http\Controllers\Controller;
+use App\Models\Stack;
 
 class ServerConfigurationController extends Controller
 {
     /**
      * Update the stack's server configuration.
      *
-     * @param  \App\Stack  $stack
+     * @param  \App\Models\Stack $stack
+     *
      * @return mixed
      */
     public function update(Stack $stack)

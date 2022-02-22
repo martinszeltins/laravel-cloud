@@ -2,7 +2,7 @@
 
 namespace App\Rules;
 
-use App\SourceProvider;
+use App\Models\SourceProvider;
 use Illuminate\Contracts\Validation\Rule;
 
 class ValidRepository implements Rule
@@ -10,7 +10,7 @@ class ValidRepository implements Rule
     /**
      * The source control provider instance.
      *
-     * @var \App\SourceProvider
+     * @var \App\Models\SourceProvider
      */
     public $source;
 
@@ -24,8 +24,9 @@ class ValidRepository implements Rule
     /**
      * Create a new rule instance.
      *
-     * @param  \App\SourceProvider  $source
-     * @param  string|null  $branch
+     * @param  \App\Models\SourceProvider $source
+     * @param  string|null                $branch
+     *
      * @return void
      */
     public function __construct($source, $branch = null)

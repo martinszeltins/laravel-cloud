@@ -2,15 +2,15 @@
 
 namespace App\Jobs;
 
-use Exception;
-use App\ServerDeployment;
-use Illuminate\Bus\Queueable;
 use App\Callbacks\CheckBuild;
+use App\Models\ServerDeployment;
 use App\Scripts\Build as BuildScript;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
+use Exception;
+use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class Build implements ShouldQueue
 {
@@ -19,14 +19,15 @@ class Build implements ShouldQueue
     /**
      * The server deployment instance.
      *
-     * @var \App\ServerDeployment
+     * @var \App\Models\ServerDeployment
      */
     public $deployment;
 
     /**
      * Create a new job instance.
      *
-     * @param  \App\ServerDeployment  $deployment
+     * @param  \App\Models\ServerDeployment $deployment
+     *
      * @return void
      */
     public function __construct(ServerDeployment $deployment)
@@ -49,7 +50,7 @@ class Build implements ShouldQueue
     /**
      * Run the build script on the server.
      *
-     * @return \App\Task
+     * @return \App\Models\Task
      */
     protected function build()
     {

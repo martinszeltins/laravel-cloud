@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests;
 
-use App\MemoizesMethods;
 use App\Rules\ValidBranch;
+use App\Traits\MemoizesMethods;
 use Illuminate\Foundation\Http\FormRequest;
 
 class CreateHookRequest extends FormRequest

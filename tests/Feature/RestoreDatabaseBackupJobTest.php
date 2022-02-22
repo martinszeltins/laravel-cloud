@@ -2,16 +2,16 @@
 
 namespace Tests\Feature;
 
-use Mockery;
-use App\Database;
-use Tests\TestCase;
-use App\DatabaseRestore;
-use Tests\Fakes\FakeTask;
-use Facades\App\TaskFactory;
-use App\Jobs\RestoreDatabaseBackup;
 use App\Callbacks\CheckDatabaseRestore;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Jobs\RestoreDatabaseBackup;
+use App\Models\Database;
+use App\Models\DatabaseRestore;
 use App\Scripts\RestoreDatabaseBackup as RestoreDatabaseBackupScript;
+use Facades\App\TaskFactory;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Mockery;
+use Tests\Fakes\FakeTask;
+use Tests\TestCase;
 
 class RestoreDatabaseBackupJobTest extends TestCase
 {

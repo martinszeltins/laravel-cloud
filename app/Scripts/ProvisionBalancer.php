@@ -2,7 +2,7 @@
 
 namespace App\Scripts;
 
-use App\Balancer;
+use App\Models\Balancer;
 
 class ProvisionBalancer extends ProvisioningScript
 {
@@ -16,14 +16,15 @@ class ProvisionBalancer extends ProvisioningScript
     /**
      * The balancer instance.
      *
-     * @var \App\Balancer
+     * @var \App\Models\Balancer
      */
     public $balancer;
 
     /**
      * Create a new script instance.
      *
-     * @param  \App\Balancer  $balancer
+     * @param  \App\Models\Balancer $balancer
+     *
      * @return void
      */
     public function __construct(Balancer $balancer)

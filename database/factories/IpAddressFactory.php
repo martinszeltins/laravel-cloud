@@ -11,10 +11,10 @@
 |
 */
 
-$factory->define(App\IpAddress::class, function () {
+$factory->define(\App\Models\IpAddress::class, function () {
     return [
-        'addressable_id' => factory(App\Database::class),
-        'addressable_type' => App\Database::class,
+        'addressable_id' => factory(\App\Models\Database::class),
+        'addressable_type' => \App\Models\Database::class,
         'public_address' => '127.0.0.1',
         'private_address' => '127.0.0.2',
     ];

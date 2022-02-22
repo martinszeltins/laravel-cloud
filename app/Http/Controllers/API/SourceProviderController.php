@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\API;
 
-use App\SourceProvider;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\SourceProvider;
+use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
 class SourceProviderController extends Controller
@@ -54,8 +54,9 @@ class SourceProviderController extends Controller
     /**
      * Delete the given source control provider.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\SourceProvider  $provider
+     * @param  \Illuminate\Http\Request   $request
+     * @param  \App\Models\SourceProvider $provider
+     *
      * @return Response
      */
     public function destroy(Request $request, SourceProvider $provider)

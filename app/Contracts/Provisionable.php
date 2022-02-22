@@ -2,7 +2,7 @@
 
 namespace App\Contracts;
 
-use App\User;
+use App\Models\User;
 use App\Scripts\Script;
 
 interface Provisionable
@@ -69,7 +69,8 @@ interface Provisionable
     /**
      * Determine if the given user can SSH into the server.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User $user
+     *
      * @return bool
      */
     public function canSsh(User $user);
@@ -126,7 +127,7 @@ interface Provisionable
     /**
      * Run the provisioning script on the server.
      *
-     * @return \App\Task|null
+     * @return \App\Models\Task|null
      */
     public function runProvisioningScript();
 

@@ -2,15 +2,15 @@
 
 namespace App\Exceptions;
 
+use App\Models\Stack;
 use Exception;
-use App\Stack;
 
 class ManifestNotFoundException extends Exception
 {
     /**
      * The stack instance.
      *
-     * @var \App\Stack
+     * @var \App\Models\Stack
      */
     public $stack;
 
@@ -31,9 +31,10 @@ class ManifestNotFoundException extends Exception
     /**
      * Create a new exception instance.
      *
-     * @param  \App\Stack  $stack
-     * @param  string  $repository
-     * @param  string  $branch
+     * @param  \App\Models\Stack $stack
+     * @param  string            $repository
+     * @param  string            $branch
+     *
      * @return void
      */
     public function __construct(Stack $stack, $repository, $branch)

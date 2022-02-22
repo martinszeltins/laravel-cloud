@@ -2,14 +2,14 @@
 
 namespace Tests\Feature;
 
-use App\Task;
-use App\Database;
-use Carbon\Carbon;
-use Tests\TestCase;
+use App\Models\Database;
+use App\Models\Task;
+use App\Scripts\GetCurrentDirectory;
 use App\Scripts\Sleep;
 use App\Scripts\WriteDummyFile;
-use App\Scripts\GetCurrentDirectory;
+use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class TaskTest extends TestCase
 {

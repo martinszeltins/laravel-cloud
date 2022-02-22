@@ -2,8 +2,8 @@
 
 namespace App\Callbacks;
 
-use App\Task;
-use App\ServerTask;
+use App\Models\ServerTask;
+use App\Models\Task;
 
 class CheckServerTask
 {

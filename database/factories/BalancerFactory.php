@@ -11,9 +11,9 @@
 |
 */
 
-$factory->define(App\Balancer::class, function () {
+$factory->define(\App\Models\Balancer::class, function () {
     return [
-        'project_id' => factory(App\Project::class),
+        'project_id' => factory(\App\Models\Project::class),
         'name' => str_random(6),
         'size' => '2GB',
         'provider_server_id' => 1,

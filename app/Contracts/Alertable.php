@@ -7,7 +7,7 @@ interface Alertable
     /**
      * Create an alert for the given instance.
      *
-     * @return \App\Alert
+     * @return \App\Models\Alert
      */
     public function toAlert();
 }

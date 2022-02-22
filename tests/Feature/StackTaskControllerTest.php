@@ -2,14 +2,11 @@
 
 namespace Tests\Feature;
 
-use App\User;
-use App\Stack;
-use App\Project;
-use Tests\TestCase;
-use App\Environment;
 use App\Jobs\RunStackTask;
-use Illuminate\Support\Facades\Bus;
+use App\Models\Stack;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Tests\TestCase;
 
 class StackTaskControllerTest extends TestCase
 {

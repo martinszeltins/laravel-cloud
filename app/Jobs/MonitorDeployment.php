@@ -2,13 +2,13 @@
 
 namespace App\Jobs;
 
+use App\Models\Deployment;
 use Exception;
-use App\Deployment;
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class MonitorDeployment implements ShouldQueue
 {
@@ -17,7 +17,7 @@ class MonitorDeployment implements ShouldQueue
     /**
      * The deployment instance.
      *
-     * @var \App\Deployment
+     * @var \App\Models\Deployment
      */
     public $deployment;
 
@@ -31,7 +31,8 @@ class MonitorDeployment implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @param  \App\Deployment  $deployment
+     * @param  \App\Models\Deployment $deployment
+     *
      * @return void
      */
     public function __construct(Deployment $deployment)

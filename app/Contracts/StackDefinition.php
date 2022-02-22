@@ -10,14 +10,14 @@ interface StackDefinition extends ArrayAccess, Arrayable
     /**
      * Get the user that is creating the stack.
      *
-     * @return \App\User
+     * @return \App\Models\User
      */
     public function creator();
 
     /**
      * Get the project associated with the request.
      *
-     * @return \App\Project
+     * @return \App\Models\Project
      */
     public function project();
 

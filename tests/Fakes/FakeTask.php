@@ -2,7 +2,7 @@
 
 namespace Tests\Fakes;
 
-use App\Task;
+use App\Models\Task;
 
 class FakeTask extends Task
 {

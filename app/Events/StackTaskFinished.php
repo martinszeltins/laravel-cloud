@@ -2,10 +2,10 @@
 
 namespace App\Events;
 
-use App\StackTask;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Foundation\Events\Dispatchable;
+use App\Models\StackTask;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class StackTaskFinished
 {
@@ -14,14 +14,15 @@ class StackTaskFinished
     /**
      * The stack task instance.
      *
-     * @var \App\StackTask
+     * @var \App\Models\StackTask
      */
     public $task;
 
     /**
      * Create a new event instance.
      *
-     * @param  \App\StackTask  $task
+     * @param  \App\Models\StackTask $task
+     *
      * @return void
      */
     public function __construct(StackTask $task)

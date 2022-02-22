@@ -2,8 +2,8 @@
 
 namespace App\Callbacks;
 
-use App\Task;
-use App\ServerDeployment;
+use App\Models\ServerDeployment;
+use App\Models\Task;
 
 class StartBackgroundServices
 {
@@ -28,7 +28,8 @@ class StartBackgroundServices
     /**
      * Handle the callback.
      *
-     * @param  Task  $task
+     * @param \App\Models\Task $task
+     *
      * @return void
      */
     public function handle(Task $task)
@@ -45,7 +46,8 @@ class StartBackgroundServices
     /**
      * Determine if daemons and schedulers should wait to start.
      *
-     * @param  \App\ServerDeployment  $deployment
+     * @param  \App\Models\ServerDeployment $deployment
+     *
      * @return bool
      */
     protected function shouldStartBackgroundServices(ServerDeployment $deployment)

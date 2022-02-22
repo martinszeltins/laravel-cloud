@@ -2,17 +2,17 @@
 
 namespace App\Providers;
 
-use App\Hook;
-use App\Stack;
-use App\Project;
-use App\Database;
-use App\Deployment;
-use App\Environment;
-use App\DatabaseBackup;
-use App\SourceProvider;
-use App\StorageProvider;
-use Illuminate\Support\Facades\Route;
+use App\Models\Database;
+use App\Models\DatabaseBackup;
+use App\Models\Deployment;
+use App\Models\Environment;
+use App\Models\Hook;
+use App\Models\Project;
+use App\Models\SourceProvider;
+use App\Models\Stack;
+use App\Models\StorageProvider;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {

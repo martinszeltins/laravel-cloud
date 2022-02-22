@@ -2,26 +2,27 @@
 
 namespace App\Services;
 
-use Exception;
-use GuzzleHttp\Client;
-use App\ServerProvider;
-use InvalidArgumentException;
 use App\Contracts\Provisionable;
 use App\Contracts\ServerProviderClient;
+use App\Models\ServerProvider;
+use Exception;
+use GuzzleHttp\Client;
+use InvalidArgumentException;
 
 class DigitalOcean implements ServerProviderClient
 {
     /**
      * The server provider instance.
      *
-     * @var \App\ServerProvider
+     * @var \App\Models\ServerProvider
      */
     protected $provider;
 
     /**
      * Create a new DigitalOcean service instance.
      *
-     * @param  \App\ServerProvider  $provider
+     * @param  \App\Models\ServerProvider $provider
+     *
      * @return void
      */
     public function __construct(ServerProvider $provider)

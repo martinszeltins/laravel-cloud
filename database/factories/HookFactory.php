@@ -11,9 +11,9 @@
 |
 */
 
-$factory->define(App\Hook::class, function () {
+$factory->define(\App\Models\Hook::class, function () {
     return [
-        'stack_id' => factory(App\Stack::class),
+        'stack_id' => factory(\App\Models\Stack::class),
         'name' => 'Test Hook',
         'branch' => 'master',
         'token' => str_random(40),

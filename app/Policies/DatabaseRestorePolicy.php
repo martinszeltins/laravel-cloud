@@ -2,8 +2,8 @@
 
 namespace App\Policies;
 
-use App\User;
-use App\Database;
+use App\Models\Database;
+use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class DatabaseRestorePolicy
@@ -13,8 +13,9 @@ class DatabaseRestorePolicy
     /**
      * Determine whether the user can restore databases.
      *
-     * @param  \App\User  $user
-     * @param  \App\Database  $database
+     * @param  \App\Models\User     $user
+     * @param  \App\Models\Database $database
+     *
      * @return mixed
      */
     public function create(User $user, Database $database)

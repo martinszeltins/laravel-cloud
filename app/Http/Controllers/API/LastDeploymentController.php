@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Stack;
-use App\Deployment;
 use App\Http\Controllers\Controller;
+use App\Models\Stack;
 
 class LastDeploymentController extends Controller
 {
@@ -13,7 +12,8 @@ class LastDeploymentController extends Controller
     /**
      * Cancel the current deployment for the given stack.
      *
-     * @param  \App\Stack  $stack
+     * @param  \App\Models\Stack $stack
+     *
      * @return Response
      */
     public function destroy(Stack $stack)

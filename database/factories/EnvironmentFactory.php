@@ -11,10 +11,10 @@
 |
 */
 
-$factory->define(App\Environment::class, function () {
+$factory->define(\App\Models\Environment::class, function () {
     return [
-        'project_id' => factory(App\Project::class),
-        'creator_id' => factory(App\User::class),
+        'project_id' => factory(\App\Models\Project::class),
+        'creator_id' => factory(\App\Models\User::class),
         'name' => 'production',
         'encryption_key' => '',
         'variables' => '',

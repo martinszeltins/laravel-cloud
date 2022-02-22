@@ -2,14 +2,14 @@
 
 namespace App\Scripts;
 
-use App\ServerDeployment;
+use App\Models\ServerDeployment;
 
 class Build extends Script
 {
     /**
      * The deployment instance.
      *
-     * @var \App\ServerDeployment
+     * @var \App\Models\ServerDeployment
      */
     public $deployment;
 
@@ -23,7 +23,8 @@ class Build extends Script
     /**
      * Create a new script instance.
      *
-     * @param  \App\ServerDeployment  $deployment
+     * @param  \App\Models\ServerDeployment $deployment
+     *
      * @return void
      */
     public function __construct(ServerDeployment $deployment)

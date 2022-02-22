@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\API;
 
-use App\StorageProvider;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\StorageProvider;
+use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
 class StorageProviderController extends Controller
@@ -54,8 +54,9 @@ class StorageProviderController extends Controller
     /**
      * Delete the given storage provider.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\StorageProvider  $provider
+     * @param  \Illuminate\Http\Request    $request
+     * @param  \App\Models\StorageProvider $provider
+     *
      * @return Response
      */
     public function destroy(Request $request, StorageProvider $provider)

@@ -2,12 +2,11 @@
 
 namespace Tests\Feature;
 
-use App\Hook;
-use App\Stack;
-use App\Deployment;
-use Tests\TestCase;
-use Illuminate\Support\Facades\Bus;
+use App\Models\Deployment;
+use App\Models\Hook;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Tests\TestCase;
 
 class HookDeploymentControllerTest extends TestCase
 {

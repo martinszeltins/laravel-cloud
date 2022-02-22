@@ -2,9 +2,9 @@
 
 namespace App\Events;
 
-use App\Alert;
-use Illuminate\Queue\SerializesModels;
+use App\Models\Alert;
 use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
 
 class AlertCreated
 {
@@ -13,14 +13,15 @@ class AlertCreated
     /**
      * The alert instance.
      *
-     * @var \App\Alert
+     * @var \App\Models\Alert
      */
     public $alert;
 
     /**
      * Create a new event instance.
      *
-     * @param  \App\Alert  $alert
+     * @param  \App\Models\Alert $alert
+     *
      * @return void
      */
     public function __construct(Alert $alert)

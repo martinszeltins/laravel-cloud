@@ -2,7 +2,7 @@
 
 namespace App\Scripts;
 
-use App\AppServer;
+use App\Services\AppServer;
 
 class ProvisionAppServer extends ProvisioningScript
 {
@@ -11,14 +11,15 @@ class ProvisionAppServer extends ProvisioningScript
     /**
      * The server instance.
      *
-     * @var \App\AppServer
+     * @var \App\Services\AppServer
      */
     public $server;
 
     /**
      * Create a new script instance.
      *
-     * @param  \App\AppServer  $server
+     * @param  \App\Services\AppServer $server
+     *
      * @return void
      */
     public function __construct(AppServer $server)

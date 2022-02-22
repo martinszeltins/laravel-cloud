@@ -2,8 +2,8 @@
 
 namespace App\Callbacks;
 
-use App\Task;
-use App\DatabaseBackup;
+use App\Models\DatabaseBackup;
+use App\Models\Task;
 
 class CheckDatabaseBackup
 {
@@ -28,7 +28,8 @@ class CheckDatabaseBackup
     /**
      * Handle the callback.
      *
-     * @param  Task  $task
+     * @param \App\Models\Task $task
+     *
      * @return void
      */
     public function handle(Task $task)

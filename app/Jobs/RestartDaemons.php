@@ -2,7 +2,6 @@
 
 namespace App\Jobs;
 
-use App\Deployment;
 use App\Scripts\RestartDaemons as RestartDaemonsScript;
 
 class RestartDaemons extends ManipulatesDaemons

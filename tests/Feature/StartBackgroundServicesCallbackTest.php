@@ -2,14 +2,14 @@
 
 namespace Tests\Feature;
 
-use App\Task;
-use Tests\TestCase;
-use App\ServerDeployment;
-use App\Jobs\StartScheduler;
-use App\Jobs\RestartDaemons;
-use Illuminate\Support\Facades\Bus;
 use App\Callbacks\StartBackgroundServices;
+use App\Jobs\RestartDaemons;
+use App\Jobs\StartScheduler;
+use App\Models\ServerDeployment;
+use App\Models\Task;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Tests\TestCase;
 
 class StartBackgroundServicesCallbackTest extends TestCase
 {

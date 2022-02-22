@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Database;
-use App\DatabaseBackup;
-use App\StorageProvider;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Validation\ValidationException;
 use App\Http\Requests\CreateDatabaseBackupRequest;
+use App\Models\Database;
+use App\Models\DatabaseBackup;
+use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class DatabaseBackupController extends Controller
 {
     /**
      * Get all of the backups for the given database.
      *
-     * @param  Request  $request
-     * @param  \App\Database  $database
+     * @param  Request              $request
+     * @param  \App\Models\Database $database
+     *
      * @return Response
      */
     public function index(Request $request, Database $database)
@@ -32,8 +32,9 @@ class DatabaseBackupController extends Controller
     /**
      * Create a new backup for the database.
      *
-     * @param  \App\Http\Requests\CreateDatabaseBackupRequest  $request
-     * @param  \App\Database  $database
+     * @param  \App\Http\Requests\CreateDatabaseBackupRequest $request
+     * @param \App\Models\Database                            $database
+     *
      * @return Response
      */
     public function store(CreateDatabaseBackupRequest $request, Database $database)
@@ -57,7 +58,8 @@ class DatabaseBackupController extends Controller
     /**
      * Destroy the given database backup.
      *
-     * @param  \App\DatabaseBackup  $backup
+     * @param  \App\Models\DatabaseBackup $backup
+     *
      * @return Response
      */
     public function destroy(DatabaseBackup $backup)

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Balancer;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateBalancerRequest;
+use App\Models\Balancer;
+use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
 class BalancerController extends Controller
@@ -43,7 +43,8 @@ class BalancerController extends Controller
     /**
      * Delete the given balancer.
      *
-     * @param  \App\Balancer  $balancer
+     * @param  \App\Models\Balancer $balancer
+     *
      * @return Response
      */
     public function destroy(Balancer $balancer)

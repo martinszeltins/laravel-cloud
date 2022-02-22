@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Environment;
-use Illuminate\Http\Request;
-use Illuminate\Encryption\Encrypter;
 use App\Http\Controllers\Controller;
+use App\Models\Environment;
+use Illuminate\Encryption\Encrypter;
+use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
 class EnvironmentController extends Controller
@@ -26,8 +26,9 @@ class EnvironmentController extends Controller
     /**
      * Retrieve the given environment.
      *
-     * @param  Request  $request
-     * @param  \App\Environment  $environment
+     * @param  Request                 $request
+     * @param  \App\Models\Environment $environment
+     *
      * @return Response
      */
     public function show(Request $request, Environment $environment)
@@ -82,8 +83,9 @@ class EnvironmentController extends Controller
     /**
      * Delete an environment.
      *
-     * @param  Request  $request
-     * @param  \App\Environment  $environment
+     * @param  Request                $request
+     * @param \App\Models\Environment $environment
+     *
      * @return Response
      */
     public function destroy(Request $request, Environment $environment)

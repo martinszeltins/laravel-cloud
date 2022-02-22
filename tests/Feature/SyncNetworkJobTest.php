@@ -2,14 +2,13 @@
 
 namespace Tests\Feature;
 
-use App\Stack;
-use App\Database;
-use App\AppServer;
-use App\WebServer;
-use App\IpAddress;
-use Tests\TestCase;
 use App\Jobs\SyncNetwork;
+use App\Models\Database;
+use App\Models\IpAddress;
+use App\Models\WebServer;
+use App\Services\AppServer;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class SyncNetworkJobTest extends TestCase
 {

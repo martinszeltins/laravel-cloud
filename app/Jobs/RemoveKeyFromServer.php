@@ -2,14 +2,14 @@
 
 namespace App\Jobs;
 
-use App\User;
-use Illuminate\Bus\Queueable;
 use App\Contracts\Provisionable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
+use App\Models\User;
+use App\Scripts\RemoveKeyFromServer as RemoveKeyFromServerScript;
+use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use App\Scripts\RemoveKeyFromServer as RemoveKeyFromServerScript;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class RemoveKeyFromServer implements ShouldQueue
 {
@@ -18,7 +18,7 @@ class RemoveKeyFromServer implements ShouldQueue
     /**
      * The user instance.
      *
-     * @var \App\User
+     * @var \App\Models\User
      */
     public $user;
 
@@ -39,8 +39,9 @@ class RemoveKeyFromServer implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @param  \App\User  $user
-     * @param  \App\Contracts\Provisionable  $provisionable
+     * @param  \App\Models\User             $user
+     * @param  \App\Contracts\Provisionable $provisionable
+     *
      * @return void
      */
     public function __construct(User $user, Provisionable $provisionable)

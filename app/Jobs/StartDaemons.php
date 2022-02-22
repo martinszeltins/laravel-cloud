@@ -2,7 +2,6 @@
 
 namespace App\Jobs;
 
-use App\Deployment;
 use App\Scripts\StartDaemons as StartDaemonsScript;
 
 class StartDaemons extends ManipulatesDaemons

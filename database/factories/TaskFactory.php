@@ -11,11 +11,11 @@
 |
 */
 
-$factory->define(App\Task::class, function () {
+$factory->define(\App\Models\Task::class, function () {
     return [
-        'project_id' => factory(App\Project::class),
-        'provisionable_id' => factory(App\Database::class),
-        'provisionable_type' => 'App\Database',
+        'project_id' => factory(\App\Models\Project::class),
+        'provisionable_id' => factory(\App\Models\Database::class),
+        'provisionable_type' => 'App\Models\Database',
         'name' => 'Task Name',
         'user' => 'root',
         'status' => 'finished',

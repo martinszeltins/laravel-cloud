@@ -2,8 +2,8 @@
 
 namespace App\Jobs;
 
-use App\Balancer;
 use App\Mail\BalancerProvisioned;
+use App\Models\Balancer;
 use Illuminate\Support\Facades\Mail;
 
 class ProvisionBalancer extends ServerProvisioner
@@ -11,7 +11,8 @@ class ProvisionBalancer extends ServerProvisioner
     /**
      * Create a new job instance.
      *
-     * @param  \App\Balancer  $provisionable
+     * @param  \App\Models\Balancer $provisionable
+     *
      * @return void
      */
     public function __construct(Balancer $provisionable)

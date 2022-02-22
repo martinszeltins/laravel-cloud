@@ -2,14 +2,14 @@
 
 namespace App\Http\Requests;
 
-use App\MemoizesMethods;
-use App\Rules\ValidSize;
-use App\Rules\ValidServeList;
-use App\Rules\ValidDatabaseName;
 use App\Contracts\StackDefinition;
-use App\Rules\ValidAppServerStack;
-use App\FiltersConfigurationArrays;
 use App\Rules\DatabaseIsProvisioned;
+use App\Rules\ValidAppServerStack;
+use App\Rules\ValidDatabaseName;
+use App\Rules\ValidServeList;
+use App\Rules\ValidSize;
+use App\Traits\FiltersConfigurationArrays;
+use App\Traits\MemoizesMethods;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ProvisionStackRequest extends FormRequest implements StackDefinition
@@ -19,7 +19,7 @@ class ProvisionStackRequest extends FormRequest implements StackDefinition
     /**
      * Get the user that is creating the stack.
      *
-     * @return \App\User
+     * @return \App\Models\User
      */
     public function creator()
     {
@@ -29,7 +29,7 @@ class ProvisionStackRequest extends FormRequest implements StackDefinition
     /**
      * Get the project associated with the request.
      *
-     * @return \App\Project
+     * @return \App\Models\Project
      */
     public function project()
     {
@@ -39,7 +39,7 @@ class ProvisionStackRequest extends FormRequest implements StackDefinition
     /**
      * Get the environment for the request.
      *
-     * @return  \App\Environment
+     * @return  \App\Models\Environment
      */
     public function environment()
     {

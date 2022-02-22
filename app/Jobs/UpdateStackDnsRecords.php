@@ -2,13 +2,13 @@
 
 namespace App\Jobs;
 
-use App\Project;
-use Illuminate\Bus\Queueable;
 use App\Contracts\DnsProvider;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
+use App\Models\Project;
+use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class UpdateStackDnsRecords implements ShouldQueue
 {
@@ -17,7 +17,7 @@ class UpdateStackDnsRecords implements ShouldQueue
     /**
      * The project instance.
      *
-     * @var \App\Project
+     * @var \App\Models\Project
      */
     public $project;
 
@@ -33,8 +33,9 @@ class UpdateStackDnsRecords implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @param  \App\Project  $project
-     * @param  string|null  $ipAddress
+     * @param  \App\Models\Project $project
+     * @param  string|null         $ipAddress
+     *
      * @return void
      */
     public function __construct(Project $project, $ipAddress = null)

@@ -2,7 +2,7 @@
 
 namespace App\Contracts;
 
-use App\DatabaseBackup;
+use App\Models\DatabaseBackup;
 
 interface StorageProviderClient
 {
@@ -72,7 +72,8 @@ interface StorageProviderClient
     /**
      * Get the upload script for the storage provider.
      *
-     * @param  \App\DatabaseBackup  $backup
+     * @param  \App\Models\DatabaseBackup $backup
+     *
      * @return string
      */
     public function uploadScript(DatabaseBackup $backup);
@@ -80,7 +81,8 @@ interface StorageProviderClient
     /**
      * Get the download script for the storage provider.
      *
-     * @param  \App\DatabaseBackup  $backup
+     * @param \App\Models\DatabaseBackup $backup
+     *
      * @return string
      */
     public function downloadScript(DatabaseBackup $backup);

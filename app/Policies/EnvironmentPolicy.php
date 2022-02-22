@@ -2,9 +2,8 @@
 
 namespace App\Policies;
 
-use App\User;
-use App\Project;
-use App\Environment;
+use App\Models\Environment;
+use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class EnvironmentPolicy
@@ -14,8 +13,9 @@ class EnvironmentPolicy
     /**
      * Determine whether the user can delete the environment.
      *
-     * @param  \App\User  $user
-     * @param  \App\Environment  $environment
+     * @param  \App\Models\User        $user
+     * @param  \App\Models\Environment $environment
+     *
      * @return mixed
      */
     public function delete(User $user, Environment $environment)

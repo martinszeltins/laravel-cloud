@@ -2,7 +2,7 @@
 
 namespace App\Callbacks;
 
-use App\Task;
+use App\Models\Task;
 
 class MarkAsProvisioned
 {

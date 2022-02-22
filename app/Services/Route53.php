@@ -2,10 +2,10 @@
 
 namespace App\Services;
 
-use Exception;
-use App\Stack;
 use App\Contracts\DnsProvider;
+use App\Models\Stack;
 use Aws\Route53\Route53Client;
+use Exception;
 
 class Route53 implements DnsProvider
 {
@@ -30,7 +30,8 @@ class Route53 implements DnsProvider
     /**
      * Add a DNS record for the given stack.
      *
-     * @param  \App\Stack  $stack
+     * @param  \App\Models\Stack $stack
+     *
      * @return string
      */
     public function addRecord(Stack $stack)
@@ -48,7 +49,8 @@ class Route53 implements DnsProvider
     /**
      * Determine if the stack's DNS record has propagated.
      *
-     * @param  \App\Stack  $stack
+     * @param \App\Models\Stack $stack
+     *
      * @return bool
      */
     public function propagated(Stack $stack)
@@ -61,7 +63,8 @@ class Route53 implements DnsProvider
     /**
      * Delete a DNS record for the given stack.
      *
-     * @param  \App\Stack  $stack
+     * @param \App\Models\Stack $stack
+     *
      * @return void
      */
     public function deleteRecord(Stack $stack)
@@ -97,8 +100,9 @@ class Route53 implements DnsProvider
     /**
      * Perform an action on the Route 53 record.
      *
-     * @param  string  $action
-     * @param  \App\Stack  $stack
+     * @param  string            $action
+     * @param  \App\Models\Stack $stack
+     *
      * @return mixed
      */
     protected function updateRecord($action, Stack $stack)

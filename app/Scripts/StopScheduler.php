@@ -2,21 +2,22 @@
 
 namespace App\Scripts;
 
-use App\ServerDeployment;
+use App\Models\ServerDeployment;
 
 class StopScheduler extends Script
 {
     /**
      * The server deployment.
      *
-     * @var \App\ServerDeployment
+     * @var \App\Models\ServerDeployment
      */
     public $deployment;
 
     /**
      * Create a new script instance.
      *
-     * @param  \App\ServerDeployment  $deployment
+     * @param  \App\Models\ServerDeployment $deployment
+     *
      * @return void
      */
     public function __construct(ServerDeployment $deployment)

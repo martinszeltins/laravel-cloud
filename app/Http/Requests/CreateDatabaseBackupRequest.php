@@ -2,16 +2,16 @@
 
 namespace App\Http\Requests;
 
-use App\StorageProvider;
-use Illuminate\Validation\Rule;
+use App\Models\StorageProvider;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class CreateDatabaseBackupRequest extends FormRequest
 {
     /**
      * Get the storage provider instance.
      *
-     * @return \App\StorageProvider
+     * @return \App\Models\StorageProvider
      */
     public function storageProvider()
     {

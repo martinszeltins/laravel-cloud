@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Stack;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProvisionStackRequest;
+use App\Models\Stack;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 
 class StackController extends Controller
@@ -45,7 +45,8 @@ class StackController extends Controller
     /**
      * Delete the given stack.
      *
-     * @param  \App\Stack  $stack
+     * @param  \App\Models\Stack $stack
+     *
      * @return Response
      */
     public function destroy(Stack $stack)

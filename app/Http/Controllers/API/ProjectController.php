@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Project;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateProjectRequest;
+use App\Models\Project;
+use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
 class ProjectController extends Controller
@@ -26,7 +26,8 @@ class ProjectController extends Controller
     /**
      * Get the project with the given ID.
      *
-     * @param  \App\Project  $project
+     * @param  \App\Models\Project $project
+     *
      * @return Response
      */
     public function show(Project $project)
@@ -64,8 +65,9 @@ class ProjectController extends Controller
     /**
      * Destroy the given project.
      *
-     * @param  Request  $request
-     * @param  \App\Project  $project
+     * @param  Request            $request
+     * @param \App\Models\Project $project
+     *
      * @return Response
      */
     public function destroy(Request $request, Project $project)
