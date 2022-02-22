@@ -1,12 +1,14 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\Providers;
 
 use App\Contracts\StorageProviderClient;
 use App\Models\DatabaseBackup;
 use App\Models\StorageProvider;
 use Aws\S3\S3Client;
 use Exception;
+use function App\Services\report;
+use function App\Services\view;
 
 class S3 implements StorageProviderClient
 {

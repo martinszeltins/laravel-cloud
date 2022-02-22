@@ -2,11 +2,11 @@
 
 namespace App\Providers;
 
-use App\Services\Route53;
 use App\Contracts\DnsProvider;
 use App\Contracts\YamlParser;
-use Aws\Route53\Route53Client;
 use App\Services\LocalYamlParser;
+use App\Services\Providers\Route53;
+use Aws\Route53\Route53Client;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

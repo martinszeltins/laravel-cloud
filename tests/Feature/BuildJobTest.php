@@ -6,7 +6,7 @@ use App\Callbacks\CheckBuild;
 use App\Jobs\Build;
 use App\Models\ServerDeployment;
 use App\Scripts\Build as BuildScript;
-use App\Services\ShellProcessRunner;
+use App\Services\Shell\ShellProcessRunner;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

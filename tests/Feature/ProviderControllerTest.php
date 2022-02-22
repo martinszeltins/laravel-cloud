@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use App\Services\DigitalOcean;
+use App\Services\Providers\DigitalOcean;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class ProviderControllerTest extends TestCase
 {

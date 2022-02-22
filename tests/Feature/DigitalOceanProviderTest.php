@@ -3,7 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\ServerProvider;
-use App\Services\DigitalOcean;
+use App\Services\Providers\DigitalOcean;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

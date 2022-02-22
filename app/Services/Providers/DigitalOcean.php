@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\Providers;
 
 use App\Contracts\Provisionable;
 use App\Contracts\ServerProviderClient;
@@ -8,6 +8,8 @@ use App\Models\ServerProvider;
 use Exception;
 use GuzzleHttp\Client;
 use InvalidArgumentException;
+use function App\Services\collect;
+use function App\Services\tap;
 
 class DigitalOcean implements ServerProviderClient
 {

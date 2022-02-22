@@ -3,7 +3,6 @@
 namespace App\Traits;
 
 use App\Services\SecureShellCommand;
-use App\Services\ShellResponse;
 use Facades\App\ShellProcessRunner;
 use Symfony\Component\Process\Exception\ProcessTimedOutException;
 use Symfony\Component\Process\Process;
@@ -161,7 +160,7 @@ trait InteractsWithSsh
      * @param  string  $script
      * @param  int  $timeout
      *
-     * @return \App\Services\ShellResponse
+     * @return \App\Services\Shell\ShellResponse
      */
     protected function runInline($script, $timeout = 60)
     {

@@ -3,7 +3,7 @@
 namespace App\Factories;
 
 use App\Models\SourceProvider;
-use App\Services\GitHub;
+use App\Services\Providers\GitHub;
 use InvalidArgumentException;
 
 class SourceProviderClientFactory

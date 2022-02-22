@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use App\Jobs\RestartDaemons;
 use App\Models\Deployment;
 use App\Models\ServerDeployment;
-use App\Services\ShellProcessRunner;
+use App\Services\Shell\ShellProcessRunner;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

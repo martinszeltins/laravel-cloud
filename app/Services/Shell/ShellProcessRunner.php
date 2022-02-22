@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\Shell;
 
 use Facades\App\ShellProcessRunner as Facade;
 use Symfony\Component\Process\Exception\ProcessTimedOutException;

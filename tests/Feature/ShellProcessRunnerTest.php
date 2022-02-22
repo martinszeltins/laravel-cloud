@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Services\ShellProcessRunner;
+use App\Services\Shell\ShellProcessRunner;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Mockery;
 use Symfony\Component\Process\Process;

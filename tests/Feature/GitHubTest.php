@@ -6,7 +6,7 @@ use App\Models\Deployment;
 use App\Models\Hook;
 use App\Models\SourceProvider;
 use App\Models\Stack;
-use App\Services\GitHub;
+use App\Services\Providers\GitHub;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Symfony\Component\Yaml\Yaml;
 use Tests\TestCase;

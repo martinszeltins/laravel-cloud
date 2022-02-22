@@ -3,7 +3,7 @@
 namespace App\Factories;
 
 use App\Models\ServerProvider;
-use App\Services\DigitalOcean;
+use App\Services\Providers\DigitalOcean;
 use InvalidArgumentException;
 
 class ServerProviderClientFactory

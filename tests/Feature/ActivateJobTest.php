@@ -9,7 +9,7 @@ use App\Models\ServerDeployment;
 use App\Scripts\Activate as ActivateScript;
 use App\Scripts\Script;
 use App\Services\AppServer;
-use App\Services\ShellProcessRunner;
+use App\Services\Shell\ShellProcessRunner;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

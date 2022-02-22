@@ -10,7 +10,7 @@ use App\Events\DeploymentFinished;
 use App\Events\DeploymentTimedOut;
 use App\Jobs\MonitorDeployment;
 use App\Jobs\TimeOutDeploymentIfStillRunning;
-use App\Services\ShellCommand;
+use App\Services\Shell\ShellCommand;
 use App\Traits\DeterminesAge;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;

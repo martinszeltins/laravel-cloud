@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use App\Models\Balancer;
 use App\Models\IpAddress;
 use App\Models\Stack;
-use App\Services\Route53;
+use App\Services\Providers\Route53;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

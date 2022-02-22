@@ -4,7 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Project;
 use App\Models\SourceProvider;
-use App\Services\GitHub;
+use App\Services\Providers\GitHub;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

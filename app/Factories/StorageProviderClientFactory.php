@@ -3,7 +3,7 @@
 namespace App\Factories;
 
 use App\Models\StorageProvider;
-use App\Services\S3;
+use App\Services\Providers\S3;
 use InvalidArgumentException;
 
 class StorageProviderClientFactory

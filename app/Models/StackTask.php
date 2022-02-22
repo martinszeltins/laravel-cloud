@@ -6,7 +6,7 @@ use App\Events\StackTaskFailed;
 use App\Events\StackTaskFinished;
 use App\Events\StackTaskRunning;
 use App\Jobs\RunStackTask;
-use App\Services\ShellCommand;
+use App\Services\Shell\ShellCommand;
 use App\Traits\Prunable;
 use Illuminate\Database\Eloquent\Model;
 use function App\collect;

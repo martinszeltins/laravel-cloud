@@ -4,7 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\DatabaseBackup;
 use App\Models\StorageProvider;
-use App\Services\S3;
+use App\Services\Providers\S3;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

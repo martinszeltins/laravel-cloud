@@ -11,7 +11,7 @@ use App\Models\Stack;
 use App\Models\StackTask;
 use App\Models\WebServer;
 use App\Models\WorkerServer;
-use App\Services\ShellProcessRunner;
+use App\Services\Shell\ShellProcessRunner;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Event;
 use Tests\TestCase;

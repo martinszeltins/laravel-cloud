@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\Providers;
 
 use App\Contracts\DnsProvider;
 use App\Models\Stack;
 use Aws\Route53\Route53Client;
 use Exception;
+use function App\Services\report;
+use function App\Services\tap;
 
 class Route53 implements DnsProvider
 {

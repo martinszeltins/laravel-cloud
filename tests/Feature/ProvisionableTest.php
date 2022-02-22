@@ -4,7 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Database;
 use App\Models\IpAddress;
-use App\Services\ShellProcessRunner;
+use App\Services\Shell\ShellProcessRunner;
 use Facades\App\ServerProviderClientFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;

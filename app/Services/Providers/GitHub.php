@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\Providers;
 
 use App\Contracts\SourceProviderClient;
 use App\Exceptions\ManifestNotFoundException;
@@ -8,9 +8,12 @@ use App\Models\Deployment;
 use App\Models\Hook;
 use App\Models\SourceProvider;
 use App\Models\Stack;
+use App\Services\Source;
 use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
+use function App\Services\collect;
+use function App\Services\report;
 
 class GitHub implements SourceProviderClient
 {
